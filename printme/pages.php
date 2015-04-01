@@ -28,10 +28,19 @@
 				</title>
 
 				<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+				<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css ">
+		
+			 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+			 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 			</head>
 
 			<body>
+			
+
+<center>
+	<?php 
+		if (isset($_SESSION['id'])) { ?>
 			<?php include '../header/header.php'; ?>
 			
 
@@ -76,6 +85,21 @@
 		</center>
 	</div>
 </div>
+
+		<?php }else{ ?>
+			<div class="jumbotron">
+				<center>
+					<div class="jumbotron">
+					<p>It seems that you haven't Login. Please Login first.</p>
+					<h2>You will be redirected to Login page in 5 seconds</h2>
+					<?php header("refresh:5, url=../login"); ?>	
+					</div>
+				</center>
+			</div>
+		<?php }
+	?>
+	<br>
+</center> 
 
 		
 

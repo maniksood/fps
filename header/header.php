@@ -1,3 +1,7 @@
+
+
+
+
 <br>
 <div class="container">
         <div class="row">
@@ -18,7 +22,7 @@
                   </form>
               
               <?php }else{ ?>
-             <center> <h4><a href="login/index.php">Login</a> | <a href="register/index.php">Register</a></h4></center>
+             <center> <h4><a href="../login/index.php">Login</a> | <a href="../register/index.php">Register</a></h4></center>
                   
               <?php }
             ?>
@@ -64,6 +68,7 @@
           
           <ul class="nav navbar-nav navbar-right" style="font-size: 1.3em;font-color: #FFFFFF;margin-right:2em;">
         <li style="font-family:Bevan; "><a href="forms.php" style="color:white;font-family: 'Roboto Condensed', sans-serif;">SUPPORT</a></li>
+        <li style="font-family:Bevan; "><a href="forms.php" style="color:white;font-family: 'Roboto Condensed', sans-serif;">MY ACCOUNT</a></li>
       
 </ul>
 

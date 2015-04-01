@@ -6,7 +6,7 @@
 		<html>
 			<head>
 				<title>
-						Login | FPS
+						Register | FPS
 				</title>
 
 				<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
@@ -35,11 +35,15 @@
 				<form action="" method="post">
 					<div class="col-md-4"></div>
 					<div class="col-md-4">
-					<label for="inputEmail">Email</label>
-					<input type="text" name="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
-					<label for="inputPassword">Password</label>
+					<label for="inputEmail">Name*</label>
+					<input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="required">
+					<label for="inputEmail">Phone*</label>
+					<input type="text" name="phone" id="inputPhone" class="form-control" placeholder="Phone" required="required">
+					<label for="inputEmail">Email*</label>
+					<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" required="required">
+					<label for="inputPassword">Password*</label>
 					<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required="required"><br>
-					<center><button type="submit" class="btn btn-primary" name="login">Login</button></center>
+					<center><button type="submit" class="btn btn-primary" name="register">Register</button></center>
 				</form>
 <br>
 				
@@ -54,31 +58,23 @@
 
 
 <?php 
-	if (isset($_POST['login'])) {
+	if (isset($_POST['register'])) {
+			$name = $_POST['name'];
+			$phone = $_POST['phone'];
 			$email = $_POST['email'];
 			$password = $_POST['password'];
+			$confirmationCode = md5(rand());
 
-			$select = "SELECT * FROM `users` WHERE email = '$email' AND password = '$password'" ;
+			$select = "SELECT * FROM `users` WHERE email = '$email'" ;
 			$result = mysql_query($select);
 			$res = mysql_fetch_assoc($result);
 			
 			if ($res) {
-				$verified = $res['verified'];
-				if ($verified == 'yes') {
-					$id = $res['id'];
-					$email = $res['email'];
-					$name = $res['name'];
-					$wallet = $res['wallet'];
-
-					$_SESSION['id'] = $id;
-					$_SESSION['name'] = $name;
-
-					header("location:../index.php");
-				}else{
-					echo "<script>alert('Your account is not verified. Please check your email for confirmation link.');</script>";
-				}
+					echo "<script>alert('The email id $email is already registered. Please enter another email.');</script>";
 			}else{
-				echo "<script>alert('Incorrect email or password. Please try again');</script>";
+					mysql_query("INSERT INTO `users`(`id`, `name`, `phone`, `email`, `password`, `confirmation_code`) VALUES ('','$name','$phone','$email','$password','$confirmationCode')");
+					echo "<script>alert('Please check your email for verification link and verify your email address');</script>";
+					// header("location:../index.php");
 			}
 		}	
 ?>

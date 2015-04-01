@@ -10,6 +10,10 @@
 				</title>
 
 				<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+				<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css ">
+		
+			 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+			 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 			</head>
 
@@ -40,7 +44,20 @@
 					<li>Lorem Ipsum is the best thing in this world and is th standard typographic font in the world</li>
 				</ol>
 <br>
-				<center><a href="upload.php" class="btn btn-primary" > Proceed </a></center>
+
+				<center>
+					<?php 
+						if (isset($_SESSION['id'])) { ?>
+							<a href="upload.php" class="btn btn-primary" > Proceed </a>
+						<?php }else{ ?>
+							<div class="jumbotron">
+								<p>Please <a href="../login">Login</a> to place the order</p>
+							</div>
+						<?php }
+					?>
+					<br>
+				</center> 
+				<center></center>
 			    </div>
 			    <div class="col-md-2"></div>
 			</div>

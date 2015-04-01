@@ -11,6 +11,10 @@
 
 				<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
 				<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+				<link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/3.0.2/normalize.css ">
+		
+			 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+			 <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
 
 			</head>
 
@@ -82,8 +86,18 @@ name="optradio" value="A3" disabled>A3 (Will be available soon)</label> </div> <
 
 
 
-<center><button type="submit" class="btn btn-primary" name="order"> Order the Print
-</button><br></center> 
+<center>
+	<?php 
+		if (isset($_SESSION['id'])) { ?>
+			<button type="submit" class="btn btn-primary" name="order">Order the Print</button>
+		<?php }else{ ?>
+			<div class="jumbotron">
+				<p>Please <a href="../login">Login</a> to place the order</p>
+			</div>
+		<?php }
+	?>
+	<br>
+</center> 
 </form>
 <br>
 				</div>                 
