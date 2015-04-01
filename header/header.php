@@ -67,8 +67,8 @@
                    </ul>
           
           <ul class="nav navbar-nav navbar-right" style="font-size: 1.3em;font-color: #FFFFFF;margin-right:2em;">
-        <li style="font-family:Bevan; "><a href="forms.php" style="color:white;font-family: 'Roboto Condensed', sans-serif;">SUPPORT</a></li>
-        <li style="font-family:Bevan; "><a href="forms.php" style="color:white;font-family: 'Roboto Condensed', sans-serif;">MY ACCOUNT</a></li>
+        <li style="font-family:Bevan; "><a href="../support/" style="color:white;font-family: 'Roboto Condensed', sans-serif;">SUPPORT</a></li>
+        <li style="font-family:Bevan; "><a href="../myaccount/orders.php" style="color:white;font-family: 'Roboto Condensed', sans-serif;">MY ACCOUNT</a></li>
       
 </ul>
 

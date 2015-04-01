@@ -104,6 +104,9 @@ name="optradio" value="A3" disabled>A3 (Will be available soon)</label> </div> <
 			<div class="col-md-2"></div>
 		</div>
 		</div>
+
+<?php include '../footer/index.php'; ?>
+		
 	</body>
 </html>
 

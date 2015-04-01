@@ -136,8 +136,10 @@ habits. Share ideas, interact with new people, learn and discover, all in one pl
 
 
 <div class="container">
-  <
+  
 </div>
+
+<?php include 'footer/index.php'; ?>
 
 	<!--js_and_ajax_links-->	
       <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -62,6 +62,7 @@
 			    <div class="col-md-2"></div>
 			</div>
 			</div>
+<?php include '../footer/index.php'; ?>
 
 			</body>
 		</html>

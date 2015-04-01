@@ -55,5 +55,7 @@
 
 				</table>
 				</div>
+<?php include '../footer/index.php'; ?>
+				
 	</body>
 </html>
